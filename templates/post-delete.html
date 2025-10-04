@@ -1,0 +1,12 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+    <h2>Borrar el post</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Estas seguro que quieres borrar el post "{{ post.title }}"</p>
+        <button type="submit">Si, borrar</button>
+    </form>
+
+{% endblock content %}
