@@ -15,14 +15,14 @@
 
     {% if user.is_authenticated %}
         <p>Hola, {{ user.username }}</p>
-        <form action="{% url 'logout' %}"  method="post">
+        <form action="{% url 'logout' %}" method="post" style="display:inline">
             {% csrf_token %}
-            <button type="submit">Cerrar Sesion</button>
+            <button type="submit">Cerrar sesión</button>
         </form>
     {% else %}
 
-    <a href="{% url 'login' %}">Iniciar Sesion</a>
-    <button type="submit">Cerrar Sesion></button>
+        <a href="{% url 'login' %}">Iniciar sesión</a>
+        <a href="{% url 'signup' %}">Registrarse</a>
 
     {% endif %}
     {% block content %}
